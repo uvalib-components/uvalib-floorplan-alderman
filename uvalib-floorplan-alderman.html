@@ -1,0 +1,67 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <uvalib-floorplan-alderman></uvalib-floorplan-alderman>
+
+@element uvalib-floorplan-alderman
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://dougchestnut.github.io/uvalib-floorplan-alderman
+-->
+<polymer-element name="uvalib-floorplan-alderman" attributes="notitle author">
+
+  <template>
+
+    <link rel="stylesheet" href="uvalib-floorplan-alderman.css" />
+    
+    <h1>Hello from uvalib-floorplan-alderman</h1>
+    <content></content>
+
+  </template>
+
+  <script>
+
+    Polymer('uvalib-floorplan-alderman', {
+      /**
+       * The `author` attribute sets an initial author
+       * 
+       * @attribute author
+       * @type string
+       */
+      author: 'Dimitri Glazkov',
+      
+      /**
+       * `fancy` is a property that does something fancy.
+       * 
+       * @property fancy
+       * @type bool
+       */
+      fancy: false,
+
+      ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
+      },
+
+      /**
+       * The `sayHello` method will return a greeting
+       * 
+       * @method sayHello
+       * @return {String} Returns a string greeting.
+       * @param {String} greeting Pass in a specific greeting
+       */
+      sayHello: function(greeting) {
+        var response = greeting || 'Hello World!';
+        return 'uvalib-floorplan-alderman says, ' + response;
+      },
+
+    });
+
+  </script>
+
+</polymer-element>
