@@ -6,15 +6,94 @@
 
   <script src="../platform/platform.js"></script>
   <link rel="import" href="uvalib-floorplan-alderman.html">
+  <link rel="import" href="../paper-toggle-button/paper-toggle-button.html">
+  <link rel="import" href="../core-scaffold/core-scaffold.html">
+  <link rel="import" href="../core-header-panel/core-header-panel.html">
+  <link rel="import" href="../core-toolbar/core-toolbar.html">
 
+  <style>
+
+    body, html {
+      margin: 0;
+      height: 100%;
+    }
+
+    floorplan-demo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+  </style>
+
+  <polymer-element name="floorplan-demo" assetpath="" attributes="">
+  	<template>
+  		    <style>    
+		    	:host {
+        			position: absolute;
+        			width: 100%;
+        			height: 100%;
+        			box-sizing: border-box;
+      			}
+      			#core_scaffold {
+        			position: absolute;
+        			top: 0px;
+        			right: 0px;
+        			bottom: 0px;
+        			left: 0px;
+      			}
+      			#core_header_panel {
+        			background-color: rgb(255, 255, 255);
+      			}
+      			#core_toolbar {
+        			color: rgb(255, 255, 255);
+        			background-color: rgb(79, 125, 201);
+      			}
+      			#section {
+        			width: 100%;
+        			height: 630px;
+        			border: 5px solid rgb(204, 204, 204);
+      			}
+      			paper-input {
+      				width: 90%;
+      			}
+    	</style>
+
+  		<core-scaffold id="core_scaffold">
+      		<core-header-panel mode="seamed" id="core_header_panel" navigation flex>
+        		<core-toolbar id="core_toolbar"></core-toolbar>
+        		<section id="section" layout vertical>
+          			<section id="section1" flex relative>
+            			
+            			<label for="toggleAdvanced">Skewed</label>
+          				<paper-toggle-button id="toggleAdvanced" toggles checked="{{skewed}}"></paper-toggle-button><br>
+
+          			</section>
+        		</section>
+      		</core-header-panel>
+      		<div id="div" tool>uvalib-catalog element demo</div>
+      		<div id="main">
+      			
+      			<uvalib-floorplan-alderman skewed?="{{skewed}}"></uvalib-floorplan-alderman>
+
+  			</div>
+    	</core-scaffold>
+
+  	</template>
+  	<script>
+  		Polymer('floorplan-demo',{
+  			includeFacets: '{"library_facet":["Alderman"],"format_facet":["Book", "Broadside", "Journal Magazine", "Large Print", "Manuscript", "Map", "Microform", "Mixed Materials", "Newspaper", "Other Media", "Photographs", "Physical Object", "Print", "Thesis%2FDissertation"]}',
+  			count:10,
+  			advanced:false
+  		});
+  	</script>
+  </polymer-element>
 </head>
 <body unresolved>
 
-  <p>An example of using <code>&lt;uvalib-floorplan-alderman></code>:</p>
-
-  <uvalib-floorplan-alderman>
-    <h2>Hello uvalib-floorplan-alderman</h2>
-  </uvalib-floorplan-alderman>
+  <floorplan-demo></floorplan-demo>
 
 </body>
 </html>
