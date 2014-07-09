@@ -16,6 +16,7 @@
     "polymer": "Polymer/polymer#~0.3.3",
     "chai": "~1.9.1",
     "mocha": "~1.19.0",
-    "core-scaffold": "Polymer/core-scaffold#~0.3.3"
+    "core-scaffold": "Polymer/core-scaffold#~0.3.3",
+    "paper-toggle-button": "Polymer/paper-toggle-button"
   }
 }
