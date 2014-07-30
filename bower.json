@@ -17,6 +17,7 @@
     "chai": "~1.9.1",
     "mocha": "~1.19.0",
     "core-scaffold": "Polymer/core-scaffold#~0.3.3",
-    "paper-toggle-button": "Polymer/paper-toggle-button"
+    "paper-toggle-button": "Polymer/paper-toggle-button",
+    "paper-checkbox": "Polymer/paper-checkbox#~0.3.4"
   }
 }

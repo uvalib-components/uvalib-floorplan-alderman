@@ -6,7 +6,7 @@
 
   <script src="../platform/platform.js"></script>
   <link rel="import" href="uvalib-floorplan-alderman.html">
-  <link rel="import" href="../paper-toggle-button/paper-toggle-button.html">
+  <link rel="import" href="../paper-checkbox/paper-checkbox.html">
   <link rel="import" href="../core-scaffold/core-scaffold.html">
   <link rel="import" href="../core-header-panel/core-header-panel.html">
   <link rel="import" href="../core-toolbar/core-toolbar.html">
@@ -59,6 +59,9 @@
       			paper-input {
       				width: 90%;
       			}
+            #section1 div {
+              padding: 20px 20px 0px 20px;
+            }
     	</style>
 
   		<core-scaffold id="core_scaffold">
@@ -67,8 +70,18 @@
         		<section id="section" layout vertical>
           			<section id="section1" flex relative>
             			
-            			<label for="toggleAdvanced">Skewed</label>
-          				<paper-toggle-button id="toggleAdvanced" toggles checked="{{skewed}}"></paper-toggle-button><br>
+            			<div>
+          				<paper-checkbox id="toggleskewed" checked="{{skewed}}"></paper-checkbox>
+                  <label for="toggleskewed">Skewed</label></div>
+                  
+                  <div>
+                  <paper-checkbox id="toggledeskew" checked="{{deskewtext}}"></paper-checkbox>
+                  <label for="toggledeskew">De-skew Text</label>
+                  </div>
+
+                  <div>
+                  <paper-checkbox id="togglestacked" checked="{{stacked}}"></paper-checkbox>
+                  <label for="togglestacked">Stacked</label> 
 
           			</section>
         		</section>
@@ -76,7 +89,7 @@
       		<div id="div" tool>uvalib-catalog element demo</div>
       		<div id="main">
       			
-      			<uvalib-floorplan-alderman skewed?="{{skewed}}"></uvalib-floorplan-alderman>
+      			<uvalib-floorplan-alderman skewed?="{{skewed}}" deskewText?="{{deskewtext}}" stacked?={{stacked}}></uvalib-floorplan-alderman>
 
   			</div>
     	</core-scaffold>
