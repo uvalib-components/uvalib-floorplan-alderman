@@ -18,60 +18,49 @@
       height: 100%;
     }
 
-    floorplan-demo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
   </style>
-
-  <polymer-element name="floorplan-demo" assetpath="" attributes="">
-  	<template>
-  		    <style>    
-		    	:host {
-        			position: absolute;
-        			width: 100%;
-        			height: 100%;
-        			box-sizing: border-box;
-      			}
-      			#core_scaffold {
-        			position: absolute;
-        			top: 0px;
-        			right: 0px;
-        			bottom: 0px;
-        			left: 0px;
-      			}
-      			#core_header_panel {
-        			background-color: rgb(255, 255, 255);
-      			}
-      			#core_toolbar {
-        			color: rgb(255, 255, 255);
-        			background-color: rgb(79, 125, 201);
-      			}
-      			#section {
-        			width: 100%;
-        			height: 630px;
-        			border: 5px solid rgb(204, 204, 204);
-      			}
-      			paper-input {
-      				width: 90%;
-      			}
+  <style>    
+          
+            #core_scaffold {
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              bottom: 0px;
+              left: 0px;
+            }
+            #core_header_panel {
+              background-color: rgb(255, 255, 255);
+            }
+            #core_toolbar {
+              color: rgb(255, 255, 255);
+              background-color: rgb(79, 125, 201);
+            }
+            #section {
+              width: 100%;
+              height: 630px;
+              border: 5px solid rgb(204, 204, 204);
+            }
+            paper-input {
+              width: 90%;
+            }
             #section1 div {
               padding: 20px 20px 0px 20px;
             }
-    	</style>
+      </style>
 
-  		<core-scaffold id="core_scaffold">
-      		<core-header-panel mode="seamed" id="core_header_panel" navigation flex>
-        		<core-toolbar id="core_toolbar"></core-toolbar>
-        		<section id="section" layout vertical>
-          			<section id="section1" flex relative>
-            			
-            			<div>
-          				<paper-checkbox id="toggleskewed" checked="{{skewed}}"></paper-checkbox>
+</head>
+<body unresolved>
+
+  <template is="auto-binding">
+
+      <core-scaffold id="core_scaffold">
+          <core-header-panel mode="seamed" id="core_header_panel" navigation flex>
+            <core-toolbar id="core_toolbar"></core-toolbar>
+            <section id="section" layout vertical>
+                <section id="section1" flex relative>
+                  
+                  <div>
+                  <paper-checkbox id="toggleskewed" checked="{{skewed}}"></paper-checkbox>
                   <label for="toggleskewed">Skewed</label></div>
                   
                   <div>
@@ -83,30 +72,18 @@
                   <paper-checkbox id="togglestacked" checked="{{stacked}}"></paper-checkbox>
                   <label for="togglestacked">Stacked</label> 
 
-          			</section>
-        		</section>
-      		</core-header-panel>
-      		<div id="div" tool>uvalib-catalog element demo</div>
-      		<div id="main">
-      			
-      			<uvalib-floorplan-alderman skewed?="{{skewed}}" deskewText?="{{deskewtext}}" stacked?={{stacked}}></uvalib-floorplan-alderman>
+                </section>
+            </section>
+          </core-header-panel>
+          <div id="div" tool>uvalib-catalog element demo</div>
+          <div id="main">
+            
+            <uvalib-floorplan-alderman skewed?="{{skewed}}" deskewText?="{{deskewtext}}" stacked?={{stacked}}></uvalib-floorplan-alderman>
 
-  			</div>
-    	</core-scaffold>
+        </div>
+      </core-scaffold>
 
-  	</template>
-  	<script>
-  		Polymer('floorplan-demo',{
-  			includeFacets: '{"library_facet":["Alderman"],"format_facet":["Book", "Broadside", "Journal Magazine", "Large Print", "Manuscript", "Map", "Microform", "Mixed Materials", "Newspaper", "Other Media", "Photographs", "Physical Object", "Print", "Thesis%2FDissertation"]}',
-  			count:10,
-  			advanced:false
-  		});
-  	</script>
-  </polymer-element>
-</head>
-<body unresolved>
-
-  <floorplan-demo></floorplan-demo>
+  </template>
 
 </body>
 </html>
