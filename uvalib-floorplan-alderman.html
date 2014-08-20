@@ -1,4 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-selector/core-selector.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <!--
 Element providing solution to no problem in particular.
@@ -2843,3 +2845,70 @@ Element providing solution to no problem in particular.
   </script>
 
 </polymer-element>
+
+
+<!--
+Element providing a floor picker widget.
+
+##### Example
+
+    <uvalib-floorpicker-alderman></uvalib-floorpicker-alderman>
+
+@element uvalib-floorpicker-alderman
+@blurb Element providing a floor picker widget.
+@status alpha
+@homepage http://uvalib-components.github.io/uvalib-floorplan-alderman
+-->
+<polymer-element name="uvalib-floorpicker-alderman" attributes="vertical horizontal selectedFloor">
+
+  <template>
+
+    <style>
+        
+    </style>
+
+    <core-selector target="{{$.floors}}" selected="{{selectedFloor}}" valueattr="label">
+    </core-selector>
+    <div id="floors" vertical?={{vertical}} layout>
+        <paper-button label="5M"></paper-button>
+        <paper-button label="5"></paper-button>
+        <paper-button label="4M"></paper-button>
+        <paper-button label="4"></paper-button>
+        <paper-button label="3M"></paper-button>
+        <paper-button label="3"></paper-button>
+        <paper-button label="2M"></paper-button>
+        <paper-button label="2"></paper-button>
+        <paper-button label="1M"></paper-button>
+        <paper-button label="1"></paper-button>
+    </div>
+
+  </template>
+
+  <script>
+
+    Polymer('uvalib-floorpicker-alderman', {
+      /**
+       * The `vertical` attribute sets an initial direction
+       * 
+       * @attribute vertical
+       * @type boolean
+       * @default false
+       */
+      vertical: false,
+
+      /**
+       * The `selectedFloor` attribute sets the floor(s) that are selected
+       * 
+       * @attribute direction
+       * @type string
+       * @default 'verticle'
+       */
+      selectedFloor: '4'
+      
+      
+    });
+
+  </script>
+
+</polymer-element>
+
