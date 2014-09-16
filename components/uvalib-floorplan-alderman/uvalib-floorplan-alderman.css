@@ -1,0 +1,108 @@
+:host {
+  display: block;
+}
+
+/* To ensure your styling works under the Shadow DOM polyfill, see
+   www.polymer-project.org/docs/polymer/styling.html#directives */
+polyfill-next-selector { content: ':host > h2'; }
+::content h2 {
+  color: blue;
+}
+
+#alderman .text {
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) skewX(0deg) skewY(0deg);
+	transform-origin: center;
+	transition:all ease-in-out 0.6s;
+}
+
+#alderman.skewed.deskewtext .text {
+	transform: rotateX(9deg) rotateY(-5deg) rotateZ(-27deg) skewX(7deg) skewY(1deg);
+	transform-origin: center;
+}
+
+#alderman > g > .wrap {
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0px,-250px);
+	transition:all ease-in-out 0.6s;
+}
+
+#alderman.stacked > g > .wrap, #alderman.skewed > g > .wrap {
+	transform: rotateX(-45deg) rotateY(9deg) rotateZ(35deg) translate(100px,-400px);
+}
+
+#alderman > g {
+	transition:all ease-in-out 0.6s;
+	opacity:0;
+}
+
+#alderman {
+	transform: scale(1);
+	transition:all ease-in-out 0.6s;
+}
+#alderman.stacked {
+	transform: scale(.25);
+}
+
+#alderman.stacked > g {
+	opacity:.5;
+	cursor:pointer;
+}
+#alderman.stacked > g:hover {
+	opacity:1;
+}
+
+#alderman.stacked g.titleText {
+	display:none;
+}
+#alderman.stacked > g#FLOOR_5M {
+	transform: translate(-150px,0px);
+}
+#alderman.stacked > g#FLOOR_5 {
+	transform: translate(0px,125px);
+}
+#alderman.stacked > g#FLOOR_4M {
+	transform: translate(-150px,435px);
+}
+#alderman.stacked > g#FLOOR_4 {
+	transform: translate(0px,560px);
+}
+#alderman.stacked > g#FLOOR_3M {
+	transform: translate(-150px,870px);
+}
+#alderman.stacked > g#FLOOR_3 {
+	transform: translate(0px,995px);
+}
+#alderman.stacked > g#FLOOR_2M {
+	transform: translate(-150px,1305px);
+}
+#alderman.stacked > g#FLOOR_2 {
+	transform: translate(0px,1430px);
+}
+#alderman.stacked > g#FLOOR_1M {
+	transform: translate(-150px,1740px);
+}
+#alderman.stacked > g#FLOOR_1 {
+	transform: translate(0px,1865px);
+}
+
+#alderman.floor_5M > g#FLOOR_5M {opacity:1;}
+#alderman.floor_5 > g#FLOOR_5 {opacity:1;}
+#alderman.floor_4M > g#FLOOR_4M {opacity:1;}
+#alderman.floor_4 > g#FLOOR_4 {opacity:1;}
+#alderman.floor_3M > g#FLOOR_3M {opacity:1;}
+#alderman.floor_3 > g#FLOOR_3 {opacity:1;}
+#alderman.floor_2M > g#FLOOR_2M {opacity:1;}
+#alderman.floor_2 > g#FLOOR_2 {opacity:1;}
+#alderman.floor_1M > g#FLOOR_1M {opacity:1;}
+#alderman.floor_1 > g#FLOOR_1 {opacity:1;}
+
+.room_numbers {
+	display: none;
+}
+
+.call_dest > g {
+	opacity:0;
+}
+
+.paths > g {
+	opacity:0;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "uvalib-floorplan-alderman#gh-pages",
+  "private": true,
+  "dependencies": {
+    "uvalib-floorplan-alderman": "uvalib-components/uvalib-floorplan-alderman#master"
+  }
+}

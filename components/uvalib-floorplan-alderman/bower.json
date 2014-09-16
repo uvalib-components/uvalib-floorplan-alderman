@@ -1,0 +1,25 @@
+{
+  "name": "uvalib-floorplan-alderman",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Element providing solution to no problem in particular.",
+  "keywords": "polymer, web-components",
+  "main": "uvalib-floorplan-alderman.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/uvalib-floorplan-alderman/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "chai": "~1.9.1",
+    "mocha": "~1.19.0",
+    "core-scaffold": "Polymer/core-scaffold#~0.3.3",
+    "paper-toggle-button": "Polymer/paper-toggle-button",
+    "paper-checkbox": "Polymer/paper-checkbox#~0.3.4",
+    "core-selector": "Polymer/core-selector",
+    "paper-button": "Polymer/paper-button"
+  }
+}
