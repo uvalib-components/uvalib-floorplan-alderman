@@ -114,3 +114,7 @@ polyfill-next-selector { content: ':host > h2'; }
 .paths > g {
 	opacity:0;
 }
+
+.active {
+	opacity:1;
+}
